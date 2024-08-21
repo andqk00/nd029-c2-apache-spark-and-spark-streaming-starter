@@ -1,0 +1,81 @@
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+| Jane.Doshi@test.com| 11.5|
+|Christina.Davis@t...|-25.0|
+|Senthil.Jones@tes...| 12.5|
+|Chris.Aristotle@t...|  4.5|
+|Craig.Ahmed@test.com|  7.0|
+|Bobby.Clayton@tes...| -2.0|
+|Angie.Habschied@t...| -3.5|
+|Jerry.Abram@test.com| -4.5|
+|  Dan.Jones@test.com| -1.5|
+|Jane.Gonzalez@tes...| -4.0|
+|Suresh.Anandh@tes...| -2.0|
+|Jason.Lincoln@tes...| -2.0|
+|John.Staples@test...| -5.5|
+|     Dan.Wu@test.com| -3.0|
+|Bobby.Gonzalez@te...| -5.0|
+|Spencer.Jefferson...| -2.0|
+| David.Huey@test.com| 13.0|
+|Suresh.Mitra@test...| 32.5|
+|Bobby.Harris@test...|-32.0|
+|  Lyn.Abram@test.com|  1.5|
++--------------------+-----+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Jane.Jefferson@te...| 18.0|
+|Suresh.Staples@te...|-11.0|
+|Spencer.Abram@tes...|-15.0|
+|Frank.Khatib@test...|-19.0|
+| Gail.Smith@test.com|-39.0|
+|Neeraj.Anandh@tes...| -2.0|
+|Sarah.Jefferson@t...| -1.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Eric.Fibonnaci@te...| -1.5|
+|Lyn.Jackson@test.com| -1.0|
+|Danny.Jefferson@t...| -4.5|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+| John.Olson@test.com| -3.0|
+|Sarah.Davis@test.com| -1.5|
+|     Lyn.Wu@test.com| -3.0|
+|Spencer.Hansen@te...|  0.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Eric.Harris@test.com| -2.0|
+|Jason.Davis@test.com| 32.5|
+| Chris.Huey@test.com| 24.0|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 5
+-------------------------------------------
