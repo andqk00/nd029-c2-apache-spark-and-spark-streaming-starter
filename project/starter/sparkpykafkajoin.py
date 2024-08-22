@@ -164,7 +164,7 @@ stediEventsStreamingDF.withColumn("value",from_json("value", stediEventsSchema))
 customerRiskStreamingDF = spark.sql("select customer, score from CustomerRisk")
 
 # TO-DO: join the streaming dataframes on the email address to get the risk score and the birth year in the same dataframe
-stediRiskScoresStreamingDF = customerRiskStreamingDF.join(emailAndBirthYearStreamingDF, expr("""
+riskScoreByBirthYear = customerRiskStreamingDF.join(emailAndBirthYearStreamingDF, expr("""
     customer = email
 """))
 
@@ -181,11 +181,11 @@ stediRiskScoresStreamingDF = customerRiskStreamingDF.join(emailAndBirthYearStrea
 # +--------------------+-----+--------------------+---------+
 #
 # In this JSON Format {"customer":"Santosh.Fibonnaci@test.com","score":"28.5","email":"Santosh.Fibonnaci@test.com","birthYear":"1963"} 
-stediRiskScoresStreamingDF.selectExpr("cast(customer as string) as key", "to_json(struct(*)) as value") \
-    .writeStream                                                                                        \
-    .format("kafka")                                                                                    \
-    .option("kafka.bootstrap.servers", "localhost:9092")                                                \
-    .option("topic","fall-risk")                                                                        \
-    .option("checkpointLocation","/tmp/kafkacheckpoint3")                                               \
-    .start()                                                                                            \
+riskScoreByBirthYear.selectExpr("cast(customer as string) as key", "to_json(struct(*)) as value") \
+    .writeStream                                                                                  \
+    .format("kafka")                                                                              \
+    .option("kafka.bootstrap.servers", "localhost:9092")                                          \
+    .option("topic","fall-risk")                                                                  \
+    .option("checkpointLocation","/tmp/kafkacheckpoint3")                                         \
+    .start()                                                                                      \
     .awaitTermination()
